@@ -1,0 +1,172 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_root.scss";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include center(column);
+    height: 100vh;
+    font-size: $fs;
+    font-family: $fm;
+    background-color: $darkBlue-300;
+}
+
+main {
+
+    .container {
+        min-width: 35rem;
+        max-width: 35rem;
+        padding: $side-paddings;
+        background-color: $darkBlue-200;
+        border-radius: $radius;
+        
+        @media (max-height: $horizontal) {
+            display: flex;
+            min-width: 75rem;
+        }
+
+        .nft-img {
+            margin-bottom: $gapContent;
+            position: relative;
+            cursor: pointer;
+
+            @media (max-height: $horizontal) {
+                margin-bottom: unset;
+                margin-right: $gapContent;
+            }
+
+            &::before {
+                content: '';
+                background-image: url(/images/icon-view.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                width: 100%;
+                height: 29rem;
+                opacity: 0;
+            }
+
+            &:hover::before {
+                opacity: 1 ;
+            }
+
+            &::after {
+                content: '';
+                background-color: $cyan;
+                position: absolute;
+                left: 0;
+
+                width: 100%;
+                height: 29rem;
+                border-radius: calc(#{$radius} / 2);
+                opacity: 0;
+            }
+
+            &:hover::after {
+                opacity: .4;
+            }
+
+            img {
+            width: 100%;
+            height: 29rem;
+            border-radius: calc(#{$radius} / 2);
+
+            }
+        }
+
+        .nft-horizontal-text-content {
+            // @media (max-height: $horizontal) {
+            //     margin-block: auto;
+            // }
+
+            .nft-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                margin-bottom: $gapContent;
+                
+                &::after {
+                    content: '';
+                    border-bottom: 1px solid $softBlue;
+                    padding-top: .5rem;
+                }
+                
+                h1 {
+                    color: $white;
+                    font-size: 1.5em;
+                    @include hoverCyan
+                }
+    
+                p {
+                    color: $softBlue;
+                }
+    
+                .nft-quantity {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .current-price {
+                        @include icons;
+    
+                        p {
+                            color: $cyan;
+                        }
+    
+                    }
+    
+                    .days-left {
+                        @include icons;
+    
+                    }
+                }
+            }
+    
+            .nft-creator {
+                display: flex;
+                // flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+    
+                div {
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                    width: 4rem;
+                    outline: 1px solid $white;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    }
+                }
+    
+                p {
+                    color: $softBlue;
+    
+                    span {
+                        color: $white;
+                        @include hoverCyan
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+
+    @media (max-height:$horizontal) {
+        display: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $cyan;
+    }
+}

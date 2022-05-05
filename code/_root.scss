@@ -1,0 +1,50 @@
+// Colors
+$darkBlue-300: hsl(217, 54%, 11%);
+$darkBlue-200: hsl(216, 50%, 16%);
+$darkBlue-100: hsl(215, 32%, 27%);
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+$fm: 'Outfit';
+$fs: 1.8rem;
+
+// Margins, paddings and radius
+$side-paddings: 2.5rem;
+$radius: 2rem;
+$gapContent: 2rem;
+
+// Media queries
+$horizontal: 575px;
+
+// Mixin
+@mixin center($direction) {
+    display: flex;
+    flex-direction: $direction;
+    margin-inline: 1.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin icons() {
+    display: flex;
+    gap: .5rem;
+    white-space: nowrap;
+    align-items: center;
+
+    div {
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+@mixin hoverCyan {
+    cursor: pointer;
+    transition: 125ms ease-in-out;
+
+                    &:hover {
+                        color: $cyan;
+                    }
+}

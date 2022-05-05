@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-inline: 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  font-size: 1.8rem;
+  font-family: "Outfit";
+  background-color: #0d192b;
+}
+
+main .container {
+  min-width: 35rem;
+  max-width: 35rem;
+  padding: 2.5rem;
+  background-color: #14253d;
+  border-radius: 2rem;
+}
+
+@media (max-height: 575px) {
+  main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 75rem;
+  }
+}
+
+main .container .nft-img {
+  margin-bottom: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-height: 575px) {
+  main .container .nft-img {
+    margin-bottom: unset;
+    margin-right: 2rem;
+  }
+}
+
+main .container .nft-img::before {
+  content: '';
+  background-image: url(/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 29rem;
+  opacity: 0;
+}
+
+main .container .nft-img:hover::before {
+  opacity: 1;
+}
+
+main .container .nft-img::after {
+  content: '';
+  background-color: #00fff7;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 29rem;
+  border-radius: calc(2rem / 2);
+  opacity: 0;
+}
+
+main .container .nft-img:hover::after {
+  opacity: .4;
+}
+
+main .container .nft-img img {
+  width: 100%;
+  height: 29rem;
+  border-radius: calc(2rem / 2);
+}
+
+main .container .nft-horizontal-text-content .nft-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+main .container .nft-horizontal-text-content .nft-text::after {
+  content: '';
+  border-bottom: 1px solid #8bacda;
+  padding-top: .5rem;
+}
+
+main .container .nft-horizontal-text-content .nft-text h1 {
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  -webkit-transition: 125ms ease-in-out;
+  transition: 125ms ease-in-out;
+}
+
+main .container .nft-horizontal-text-content .nft-text h1:hover {
+  color: #00fff7;
+}
+
+main .container .nft-horizontal-text-content .nft-text p {
+  color: #8bacda;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity .current-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity .current-price div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity .current-price p {
+  color: #00fff7;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity .days-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .nft-horizontal-text-content .nft-text .nft-quantity .days-left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .nft-horizontal-text-content .nft-creator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+main .container .nft-horizontal-text-content .nft-creator div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .nft-horizontal-text-content .nft-creator div img {
+  width: 4rem;
+  outline: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main .container .nft-horizontal-text-content .nft-creator p {
+  color: #8bacda;
+}
+
+main .container .nft-horizontal-text-content .nft-creator p span {
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 125ms ease-in-out;
+  transition: 125ms ease-in-out;
+}
+
+main .container .nft-horizontal-text-content .nft-creator p span:hover {
+  color: #00fff7;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+@media (max-height: 575px) {
+  footer {
+    display: none;
+  }
+}
+
+footer a {
+  text-decoration: none;
+  color: #00fff7;
+}
+/*# sourceMappingURL=style.css.map */
