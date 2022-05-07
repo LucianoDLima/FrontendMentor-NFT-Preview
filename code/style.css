@@ -89,7 +89,7 @@ main .container .nft-img {
 
 main .container .nft-img::before {
   content: '';
-  background-image: url(/images/icon-view.svg);
+  background-image: url(https://lucianodlima.github.io/FrontendMentor-NFT-Preview/images/icon-view.svg);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
