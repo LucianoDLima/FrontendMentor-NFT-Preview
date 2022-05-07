@@ -3,14 +3,9 @@
 
 This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Table of contents
-
- - [The challenge](#the-challenge)
- - [Links](#links)
-
 ## Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/nft-preview-scss-and-horizontal-media-query-ryjOJM4Uc)
 - [Live Site UR](https://lucianodlima.github.io/FrontendMentor-NFT-Preview/)
 
 
